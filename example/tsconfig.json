@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@ariefw-rn/three-line-menu": ["../src/index"],
+      "@ariefw-rn/three-line-menu/*": ["../src/*"]
+    }
+  }
+}

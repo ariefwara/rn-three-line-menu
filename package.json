@@ -1,0 +1,43 @@
+{
+  "name": "@ariefw-rn/three-line-menu",
+  "version": "0.1.0",
+  "description": "The ariefw-rn three-line-menu module functions as a specialized UI component that bridges the React layer with the underlying layout engine to provide a responsive touch interactive navigation trigger. It programmatically manages the visual transitions between menu states allowing developers to easily synchronize a hamburger icon appearance with the application drawer or navigation logic across iOS Android and Web. By utilizing the Expo Modules SDK it ensures high performance rendering and consistent touch event handling effectively abstracting cross platform styling complexities into a single declarative component.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "open:ios": "xed example/ios",
+    "open:android": "open -a \"Android Studio\" example/android"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "@ariefw-rn/three-line-menu",
+    "ThreeLineMenu"
+  ],
+  "repository": "https://github.com/ariefwara/rn-three-line-menu",
+  "bugs": {
+    "url": "https://github.com/ariefwara/rn-three-line-menu/issues"
+  },
+  "author": "Arief Warazuhudien <arief.wara@gmail.com> (https://github.com/ariefwara)",
+  "license": "MIT",
+  "homepage": "https://github.com/ariefwara/rn-three-line-menu#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "~19.1.0",
+    "expo-module-scripts": "^5.0.8",
+    "expo": "^54.0.27",
+    "react-native": "0.81.5"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}

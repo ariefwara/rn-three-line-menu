@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["ThreeLineMenuModule"]
+  },
+  "android": {
+    "modules": ["com.ariefw.rn.threelinemenu.ThreeLineMenuModule"]
+  }
+}
