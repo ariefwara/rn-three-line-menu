@@ -1,6 +1,6 @@
 {
   "name": "@ariefw-rn/three-line-menu",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "The ariefw-rn three-line-menu module functions as a specialized UI component that bridges the React layer with the underlying layout engine to provide a responsive touch interactive navigation trigger. It programmatically manages the visual transitions between menu states allowing developers to easily synchronize a hamburger icon appearance with the application drawer or navigation logic across iOS Android and Web. By utilizing the Expo Modules SDK it ensures high performance rendering and consistent touch event handling effectively abstracting cross platform styling complexities into a single declarative component.",
   "main": "build/index.js",
   "types": "build/index.d.ts",

@@ -2,6 +2,10 @@
 
 A responsive and animated three-line menu (hamburger menu) component for React Native applications. This component provides a sleek animated sidebar that works seamlessly across iOS, Android, and Web platforms. The menu features smooth slide-in animations, backdrop dimming, and safe area handling for modern mobile devices.
 
+## Demo
+
+Try it out on [Expo Snack](https://snack.expo.dev/@ariefwara/rn-three-line-menu)!
+
 ## Background
 
 This component follows an old-school philosophy similar to Java Swing components, focusing on functionality over appearance. It's designed for developers who prioritize getting things done quickly rather than spending time on extensive UI customization. The component provides a ready-to-use solution that requires minimal setup - you only need to provide the menu items themselves. This approach allows for fast development without the need for complex styling or detailed customization, making it ideal for applications where functionality takes precedence over visual appearance.
