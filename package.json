@@ -28,11 +28,13 @@
   "author": "Arief Warazuhudien <arief.wara@gmail.com> (https://github.com/ariefwara)",
   "license": "MIT",
   "homepage": "https://github.com/ariefwara/rn-three-line-menu#readme",
-  "dependencies": {},
+  "dependencies": {
+    "react-native-safe-area-context": "^5.6.2"
+  },
   "devDependencies": {
     "@types/react": "~19.1.0",
-    "expo-module-scripts": "^5.0.8",
     "expo": "^54.0.27",
+    "expo-module-scripts": "^5.0.8",
     "react-native": "0.81.5"
   },
   "peerDependencies": {

@@ -1,73 +1,40 @@
-import { useEvent } from 'expo';
-import ThreeLineMenu, { ThreeLineMenuView } from '@ariefw-rn/three-line-menu';
-import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, View, Alert } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { ThreeLineMenuView } from '@ariefw-rn/three-line-menu';
+import { MenuOption } from '@ariefw-rn/three-line-menu';
 
 export default function App() {
-  const onChangePayload = useEvent(ThreeLineMenu, 'onChange');
+  const menuData: MenuOption[] = [
+    { 
+      label: 'Dashboard', 
+      onPress: () => Alert.alert('Dashboard') 
+    },
+    { 
+      label: 'Account', 
+      onPress: () => Alert.alert('Account') 
+    },
+    { 
+      label: 'Help & Support', 
+      onPress: () => Alert.alert('Support') 
+    },
+  ];
 
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.container}>
-        <Text style={styles.header}>Module API Example</Text>
-        <Group name="Constants">
-          <Text>{ThreeLineMenu.PI}</Text>
-        </Group>
-        <Group name="Functions">
-          <Text>{ThreeLineMenu.hello()}</Text>
-        </Group>
-        <Group name="Async functions">
-          <Button
-            title="Set value"
-            onPress={async () => {
-              await ThreeLineMenu.setValueAsync('Hello from JS!');
-            }}
-          />
-        </Group>
-        <Group name="Events">
-          <Text>{onChangePayload?.value}</Text>
-        </Group>
-        <Group name="Views">
-          <ThreeLineMenuView
-            url="https://www.example.com"
-            onLoad={({ nativeEvent: { url } }) => console.log(`Loaded: ${url}`)}
-            style={styles.view}
-          />
-        </Group>
-      </ScrollView>
-    </SafeAreaView>
+    <SafeAreaProvider style={styles.screen}>
+      <View style={styles.header}>
+        <ThreeLineMenuView data={menuData} />
+      </View>
+    </SafeAreaProvider>
   );
 }
 
-function Group(props: { name: string; children: React.ReactNode }) {
-  return (
-    <View style={styles.group}>
-      <Text style={styles.groupHeader}>{props.name}</Text>
-      {props.children}
-    </View>
-  );
-}
-
-const styles = {
+const styles = StyleSheet.create({
+  screen: { flex: 1, backgroundColor: '#FAFAFA' },
   header: {
-    fontSize: 30,
-    margin: 20,
+    backgroundColor: '#FFF',
+    justifyContent: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: '#EEE',
   },
-  groupHeader: {
-    fontSize: 20,
-    marginBottom: 20,
-  },
-  group: {
-    margin: 20,
-    backgroundColor: '#fff',
-    borderRadius: 10,
-    padding: 20,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#eee',
-  },
-  view: {
-    flex: 1,
-    height: 200,
-  },
-};
+});

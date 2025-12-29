@@ -1,19 +1,11 @@
-import type { StyleProp, ViewStyle } from 'react-native';
+export interface MenuOption {
+  /** The text displayed in the sidebar for each item */
+  label: string;
+  /** The function executed when the item is tapped */
+  onPress: () => void;
+}
 
-export type OnLoadEventPayload = {
-  url: string;
-};
-
-export type ThreeLineMenuModuleEvents = {
-  onChange: (params: ChangeEventPayload) => void;
-};
-
-export type ChangeEventPayload = {
-  value: string;
-};
-
-export type ThreeLineMenuViewProps = {
-  url: string;
-  onLoad: (event: { nativeEvent: OnLoadEventPayload }) => void;
-  style?: StyleProp<ViewStyle>;
-};
+export interface ThreeLineMenuProps {
+  /** Array of menu options to populate the sidebar */
+  data: MenuOption[];
+}
